@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Starbucks Careers</title>
+  <style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .header {
+    background-image: url('https://i.pinimg.com/474x/0d/74/ce/0d74cef29a09a54ffb70872f40b6b530.jpg'); 
+    background-repeat:repeat-x;
+    height: 400px;
+    text-align: center;
+    color: white;
+    padding-top: 100px;
+  }
+  
+  .header-title {
+    font-size: 36px;
+  }
+  
+  .why-work-with-us,
+  .join-us {
+    padding: 50px 20px;
+  }
+  
+  h2 {
+    font-size: 24px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  nav {
+            background-color:#14433D;
+            color:#ffffff;
+            height: 50px;
+            display: flex;
+            justify-content: space-between; 
+            align-items:center; 
+            padding: 0 20px; 
+        }
+
+        nav a {
+            text-decoration: none; /* Remove underline from links */
+            color: white;
+            margin: 0 10px; /* Add some spacing between navigation items */
+        }
+        #image-on-right {
+            width: 50px; /* Adjust the width of the image */
+            height: auto; /* Maintain aspect ratio */
+        }
+        .container {
+  display: flex;
+  background-color:antiquewhite;
+  padding: 20px;
+
+}
+
+.image-container {
+  flex: 1;
+  padding-right: 20px; /* Adjust as needed */
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.text-container {
+  flex: 2;
+}
+
+.text-container p {
+  color:#14433D; /* Text color */
+}
+header {
+    background-color: #14433D;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+#searchInput {
+    padding: 8px;
+    margin-top: 10px;
+    width: 300px;
+}
+
+.job {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px;
+    background-color: #f9f9f9;
+}
+
+.applyBtn {
+    background-color: #14433D;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.applyBtn:hover {
+    background-color: #0c2c27;
+}
+
+</style>  
+</head>
+<body>
+  <nav>
+    <div>
+        <a href="updated.html">Home</a>
+        <a href="jobs.html">Jobs</a>
+        <a href="menu.html">Menu</a>
+        <a href="Login.html">Login</a>
+    </div>
+    <img id="image-on-right" src=https://i.pinimg.com/474x/5a/46/c6/5a46c64aaa900610c19fdc57de3036bb.jpg alt="Image on the right">
+</nav>
+<div class="container">
+  <div class="image-container">
+    <img src="https://i.pinimg.com/474x/5a/46/c6/5a46c64aaa900610c19fdc57de3036bb.jpg" alt="Image description">
+  </div>
+  <div class="text-container">
+    <p style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-weight: bold;font-size: 70px;">WANT TO WORK WITH US? <br> BE A PART OF STARBUCKS FAMILY?? <br></p>
+    <p> Explore various Career opportunities at Starbucks</p>
+
+  </div>
+
+</div>
+<header>
+  <h1>Jobs Available</h1>
+  <input type="text" id="searchInput" placeholder="Search jobs">
+</header>
+
+<section id="jobListings">
+  <div class="job">
+      <h2>Assistant Manager</h2>
+      <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <button class="applyBtn">Apply</button>
+  </div>
+  <div class="job">
+      <h2>Barista</h2>
+      <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <button class="applyBtn">Apply</button>
+  </div>
+  <div class="job">
+    <h2>Barista</h2>
+    <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <button class="applyBtn">Apply</button>
+</div>
+<div class="job">
+  <h2>Manager</h2>
+  <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  <button class="applyBtn">Apply</button>
+</div>
+<div class="job">
+  <h2>Manager</h2>
+  <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  <button class="applyBtn">Apply</button>
+</div>
+<div class="container">
+<div class="text-container">
+  <p style="font-family:Arial, Helvetica, sans-serif;font-size: 30px;">Why Work With Us</p>
+  <p>Here are some reasons why you should consider a career at Starbucks:</p>
+  <ul>
+    <li>Great company culture</li>
+    <li>Opportunities for growth and advancement</li>
+    <li>Competitive benefits package</li>
+    <li>Commitment to diversity and inclusion</li>
+  </ul>
+</div>
+<div class="image-container">
+  <img src="https://i.pinimg.com/474x/5a/46/c6/5a46c64aaa900610c19fdc57de3036bb.jpg" alt="Image description">
+</div>
+</div>
+</section>
+<script>
+  document.getElementById('searchInput').addEventListener('input', function() {
+    let searchValue = this.value.toLowerCase();
+    let jobListings = document.querySelectorAll('.job');
+
+    jobListings.forEach(function(job) {
+        let title = job.querySelector('h2').textContent.toLowerCase();
+        if (title.includes(searchValue)) {
+            job.style.display = 'block';
+        } else {
+            job.style.display = 'none';
+        }
+    });
+});
+</script>
+
+</body>
+</html>

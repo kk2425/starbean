@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+   .card {
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 0 10px #ddd;
+            width: 300px;
+            height: 380px;
+        }
+        .card-header {
+            color:bisque;
+            background-color: #14433D ;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .card-body {
+            padding: 10px;
+            color:black;
+            line-height:0px;
+        }
+        .card-footer {
+            background-color:#14433D;
+            padding: 5px;
+            border-top: 1px solid #ddd;
+            color:white;
+        }
+        .card-footer button {
+            margin: 5px;
+            background-color: #14433D;
+            color: white;
+        }
+        .circle-img {
+            position:absolute;
+           top: -55px;
+            left: 100px;
+           width: 130px;
+           height: 130px;
+          border-radius:50%;
+            overflow: hidden;
+          align-self: center;
+        }
+        .circle-img img {
+            width: 100%;
+            height: auto;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #14433D;
+            color: #ffffff;
+            padding: 10px 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #ffffff;
+            margin-right: 20px;
+        }
+
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        nav {
+            background-color:#14433D;
+            color:#ffffff;
+            height: 50px;
+            display: flex;
+            justify-content: space-between; 
+            align-items:center; 
+            padding: 0 20px; 
+        }
+
+        nav a {
+            text-decoration: none; /* Remove underline from links */
+            color: white;
+            margin: 0 10px; /* Add some spacing between navigation items */
+        }
+
+        #image-on-right {
+            width: 50px; /* Adjust the width of the image */
+            height: auto; /* Maintain aspect ratio */
+        }
+        .sidebar {
+            width: 30%;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        .sidebar h2 {
+            margin-bottom: 20px;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .sidebar ul ul {
+            margin-left: 20px;
+        }
+
+        .sidebar ul a {
+            text-decoration: none;
+            color: #333;
+            display: block;
+            padding: 5px 0;
+        }
+
+        .sidebar ul a:hover {
+            background-color: #ddd;
+        }
+
+        .content {
+            width: 90%;
+            padding: 20px;
+        }
+
+        .content h1 {
+            color: #333;
+        }
+
+        .content p {
+            color: #666;
+            line-height: 1.5;
+        }
+      
+    @keyframes example {
+        0%   { background-image: url('https://source.unsplash.com/1000x500/?starbucks'); }
+        30%  { background-image: url('https://source.unsplash.com/1000x500/?coffee'); }
+        50%  { background-image: url('https://source.unsplash.com/1000x500/?cafe'); }
+        100% { background-image: url('https://source.unsplash.com/1000x500/?starbucks'); }
+    }
+
+    .background {
+        width: 1000px;
+        height: 500px;
+        background-color: #14433D;
+        animation-name: example;
+        animation-duration: 10s;
+        animation-iteration-count: infinite; /* Add this line to make the animation repeat */
+    }
+
+.heading
+{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 05px;
+    margin-bottom: 05px;
+    text-align: center;
+}
+    </style>
+</head>
+<body>
+    <nav>
+        <div>
+            <a href="updated.html">Home</a>
+            <a href="jobs.html">Jobs</a>
+            <a href="menu.html">Menu</a>
+            <a href="Login.html">Login</a>
+        </div>
+        <img id="image-on-right" src=https://i.pinimg.com/474x/5a/46/c6/5a46c64aaa900610c19fdc57de3036bb.jpg alt="Image on the right">
+    </nav>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="#drinks">Drinks</a>
+                    <ul>
+                        <li><a href="#coolers">Coolers</a></li>
+                        <li><a href="#shakes">Shakes</a></li>
+                        <li><a href="#coffee">Coffee</a></li>
+                    </ul>
+                </li>
+                <li><a href="#foods">Foods</a>
+                    <ul>
+                        <li><a href="#snacks">Snacks</a></li>
+                        <li><a href="#desserts">Desserts</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="background">
+             <h1 style="color: white;">Welcome to our Menu!</h1>
+             </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="container">
+            <div class="heading"> <h2 style="text-align: center;">Drinks</h2></div>
+        </div>
+    </div>
+        <hr>
+        <div class="content">
+            <div class="container">
+                <div class="heading"> <h3>Coolers</h3></div>
+            </div>
+        </div>
+      
+        <div class="content">
+            <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="circle-img">
+                            <img src="BERRIES.jpg" alt="berry cooler">
+                          </div>
+                        <div class="card-header"> 
+                            <h5><br><br>Strawberry Lemonade</h5>
+                           </div> 
+                           <div class="card-body"> 
+                            <h6>Price</h6>
+                             <p>$2.50</p> 
+                             <h6>Calories</h6> 
+                             <p>130</p> 
+                             <h6>Carbs</h6> 
+                             <p>26g</p> 
+                            </div> 
+                            <div class="card-footer"> 
+                              <button class="btn btn-primary">Add to Cart</button> 
+                            </div> 
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="circle-img">
+                            <img src="LEMON.jpg" alt="strawberry cooler">
+                          </div>
+                        <div class="card-header"> 
+                            <h5><br><br>Strawberry Lemonade</h5>
+                           </div> 
+                           <div class="card-body"> 
+                            <h6>Price</h6>
+                             <p>$2.50</p> 
+                             <h6>Calories</h6> 
+                             <p>130</p> 
+                             <h6>Carbs</h6> 
+                             <p>26g</p> 
+                            </div> 
+                            <div class="card-footer"> 
+                              <button class="btn btn-primary">Add to Cart</button> 
+                            </div> 
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="circle-img">
+                            <img src="ORANGE.jpg" alt="strawberry cooler">
+                          </div>
+                        <div class="card-header"> 
+                            <h5><br><br>Strawberry Lemonade</h5>
+                           </div> 
+                           <div class="card-body"> 
+                            <h6>Price</h6>
+                             <p>$2.50</p> 
+                             <h6>Calories</h6> 
+                             <p>130</p> 
+                             <h6>Carbs</h6> 
+                             <p>26g</p> 
+                            </div> 
+                            <div class="card-footer"> 
+                              <button class="btn btn-primary">Add to Cart</button> 
+                            </div> 
+                    </div>
+                </div>
+            </div>
+            </div></div>
+            <div class="content">
+                <div class="container">
+                    <div class="heading"> <h3>Frappe</h3></div>
+                </div>
+            </div>
+          
+            <div class="content">
+                <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="circle-img">
+                                <img src="frappe1.jpg" alt="strawberry cooler">
+                              </div>
+                            <div class="card-header"> 
+                                <h5><br><br>Strawberry Lemonade</h5>
+                               </div> 
+                               <div class="card-body"> 
+                                <h6>Price</h6>
+                                 <p>$2.50</p> 
+                                 <h6>Calories</h6> 
+                                 <p>130</p> 
+                                 <h6>Carbs</h6> 
+                                 <p>26g</p> 
+                                </div> 
+                                <div class="card-footer"> 
+                                  <button class="btn btn-primary">Add to Cart</button> 
+                                </div> 
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="circle-img">
+                                <img src="frappe2.jpg" alt="strawberry cooler">
+                              </div>
+                            <div class="card-header"> 
+                                <h5><br><br>Strawberry Lemonade</h5>
+                               </div> 
+                               <div class="card-body"> 
+                                <h6>Price</h6>
+                                 <p>$2.50</p> 
+                                 <h6>Calories</h6> 
+                                 <p>130</p> 
+                                 <h6>Carbs</h6> 
+                                 <p>26g</p> 
+                                </div> 
+                                <div class="card-footer"> 
+                                  <button class="btn btn-primary">Add to Cart</button> 
+                                </div> 
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="circle-img">
+                                <img src="frappe3.jpg" alt="strawberry cooler">
+                              </div>
+                            <div class="card-header"> 
+                                <h5><br><br>Strawberry Lemonade</h5>
+                               </div> 
+                               <div class="card-body"> 
+                                <h6>Price</h6>
+                                 <p>$2.50</p> 
+                                 <h6>Calories</h6> 
+                                 <p>130</p> 
+                                 <h6>Carbs</h6> 
+                                 <p>26g</p> 
+                                </div> 
+                                <div class="card-footer"> 
+                                  <button class="btn btn-primary">Add to Cart</button> 
+                                </div> 
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+    <hr>
+    <div class="content">
+        <div class="container">
+            <div class="heading"> <h3>Coffee</h3></div>
+        </div>
+    </div>
+  
+    <div class="content">
+        <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="circle-img">
+                        <img src="coffee1.jpg" alt="strawberry cooler">
+                      </div>
+                    <div class="card-header"> 
+                        <h5><br><br>Strawberry Lemonade</h5>
+                       </div> 
+                       <div class="card-body"> 
+                        <h6>Price</h6>
+                         <p>$2.50</p> 
+                         <h6>Calories</h6> 
+                         <p>130</p> 
+                         <h6>Carbs</h6> 
+                         <p>26g</p> 
+                        </div> 
+                        <div class="card-footer"> 
+                          <button class="btn btn-primary">Add to Cart</button> 
+                        </div> 
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="circle-img">
+                        <img src="cofee.jpg" alt="strawberry cooler">
+                      </div>
+                    <div class="card-header"> 
+                        <h5><br><br>Strawberry Lemonade</h5>
+                       </div> 
+                       <div class="card-body"> 
+                        <h6>Price</h6>
+                         <p>$2.50</p> 
+                         <h6>Calories</h6> 
+                         <p>130</p> 
+                         <h6>Carbs</h6> 
+                         <p>26g</p> 
+                        </div> 
+                        <div class="card-footer"> 
+                          <button class="btn btn-primary">Add to Cart</button> 
+                        </div> 
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="circle-img">
+                        <img src="coffee2.jpg" alt="strawberry cooler">
+                      </div>
+                    <div class="card-header"> 
+                        <h5><br><br>Strawberry Lemonade</h5>
+                       </div> 
+                       <div class="card-body"> 
+                        <h6>Price</h6>
+                         <p>$2.50</p> 
+                         <h6>Calories</h6> 
+                         <p>130</p> 
+                         <h6>Carbs</h6> 
+                         <p>26g</p> 
+                        </div> 
+                        <div class="card-footer"> 
+                          <button class="btn btn-primary">Add to Cart</button> 
+                        </div> 
+                </div>
+            </div>
+        </div>
+        </div></div>
+        <div class="content">
+            <div class="container">
+                <div class="heading"> <h3>Oleato</h3></div>
+            </div>
+        </div>
+      
+        <div class="content">
+            <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="circle-img">
+                            <img src="oleato.jpg" alt="strawberry cooler">
+                          </div>
+                        <div class="card-header"> 
+                            <h5><br><br>Strawberry Lemonade</h5>
+                           </div> 
+                           <div class="card-body"> 
+                            <h6>Price</h6>
+                             <p>$2.50</p> 
+                             <h6>Calories</h6> 
+                             <p>130</p> 
+                             <h6>Carbs</h6> 
+                             <p>26g</p> 
+                            </div> 
+                            <div class="card-footer"> 
+                              <button class="btn btn-primary">Add to Cart</button> 
+                            </div> 
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="circle-img">
+                            <img src="oleato2.jpg" alt="strawberry cooler">
+                          </div>
+                        <div class="card-header"> 
+                            <h5><br><br>Strawberry Lemonade</h5>
+                           </div> 
+                           <div class="card-body"> 
+                            <h6>Price</h6>
+                             <p>$2.50</p> 
+                             <h6>Calories</h6> 
+                             <p>130</p> 
+                             <h6>Carbs</h6> 
+                             <p>26g</p> 
+                            </div> 
+                            <div class="card-footer"> 
+                              <button class="btn btn-primary">Add to Cart</button> 
+                            </div> 
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="circle-img">
+                            <img src="matcha.jpg" alt="strawberry cooler">
+                          </div>
+                        <div class="card-header"> 
+                            <h5><br><br>Strawberry Lemonade</h5>
+                           </div> 
+                           <div class="card-body"> 
+                            <h6>Price</h6>
+                             <p>$2.50</p> 
+                             <h6>Calories</h6> 
+                             <p>130</p> 
+                             <h6>Carbs</h6> 
+                             <p>26g</p> 
+                            </div> 
+                            <div class="card-footer"> 
+                              <button class="btn btn-primary">Add to Cart</button> 
+                            </div> 
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <hr>
+        <hr>
+        <div class="heading"><h3> Food</h3></div>
+        <hr>
+        <div class="content">
+            <div class="container">
+            <div class="row">
+                <div class="content">
+                    <div class="container">
+                        <div class="heading"> <h3>Breakfast</h3></div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="circle-img">
+                            <img src="frappe1.jpg" alt="strawberry cooler">
+                          </div>
+                        <div class="card-header"> 
+                            <h5><br><br>Strawberry Lemonade</h5>
+                           </div> 
+                           <div class="card-body"> 
+                            <h6>Price</h6>
+                             <p>$2.50</p> 
+                             <h6>Calories</h6> 
+                             <p>130</p> 
+                             <h6>Carbs</h6> 
+                             <p>26g</p> 
+                            </div> 
+                            <div class="card-footer"> 
+                              <button class="btn btn-primary">Add to Cart</button> 
+                            </div> 
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="circle-img">
+                            <img src="frappe2.jpg" alt="strawberry cooler">
+                          </div>
+                        <div class="card-header"> 
+                            <h5><br><br>Strawberry Lemonade</h5>
+                           </div> 
+                           <div class="card-body"> 
+                            <h6>Price</h6>
+                             <p>$2.50</p> 
+                             <h6>Calories</h6> 
+                             <p>130</p> 
+                             <h6>Carbs</h6> 
+                             <p>26g</p> 
+                            </div> 
+                            <div class="card-footer"> 
+                              <button class="btn btn-primary">Add to Cart</button> 
+                            </div> 
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="circle-img">
+                            <img src="frappe3.jpg" alt="strawberry cooler">
+                          </div>
+                        <div class="card-header"> 
+                            <h5><br><br>Strawberry Lemonade</h5>
+                           </div> 
+                           <div class="card-body"> 
+                            <h6>Price</h6>
+                             <p>$2.50</p> 
+                             <h6>Calories</h6> 
+                             <p>130</p> 
+                             <h6>Carbs</h6> 
+                             <p>26g</p> 
+                            </div> 
+                            <div class="card-footer"> 
+                              <button class="btn btn-primary">Add to Cart</button> 
+                            </div> 
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+<hr>
+<div class="content">
+    <div class="container">
+        <div class="heading"> <h3>Snacks</h3></div>
+    </div>
+</div>
+
+<div class="content">
+    <div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="circle-img">
+                    <img src="coffee1.jpg" alt="strawberry cooler">
+                  </div>
+                <div class="card-header"> 
+                    <h5><br><br>Strawberry Lemonade</h5>
+                   </div> 
+                   <div class="card-body"> 
+                    <h6>Price</h6>
+                     <p>$2.50</p> 
+                     <h6>Calories</h6> 
+                     <p>130</p> 
+                     <h6>Carbs</h6> 
+                     <p>26g</p> 
+                    </div> 
+                    <div class="card-footer"> 
+                      <button class="btn btn-primary">Add to Cart</button> 
+                    </div> 
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="circle-img">
+                    <img src="cofee.jpg" alt="strawberry cooler">
+                  </div>
+                <div class="card-header"> 
+                    <h5><br><br>Strawberry Lemonade</h5>
+                   </div> 
+                   <div class="card-body"> 
+                    <h6>Price</h6>
+                     <p>$2.50</p> 
+                     <h6>Calories</h6> 
+                     <p>130</p> 
+                     <h6>Carbs</h6> 
+                     <p>26g</p> 
+                    </div> 
+                    <div class="card-footer"> 
+                      <button class="btn btn-primary">Add to Cart</button> 
+                    </div> 
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="circle-img">
+                    <img src="coffee2.jpg" alt="strawberry cooler">
+                  </div>
+                <div class="card-header"> 
+                    <h5><br><br>Strawberry Lemonade</h5>
+                   </div> 
+                   <div class="card-body"> 
+                    <h6>Price</h6>
+                     <p>$2.50</p> 
+                     <h6>Calories</h6> 
+                     <p>130</p> 
+                     <h6>Carbs</h6> 
+                     <p>26g</p> 
+                    </div> 
+                    <div class="card-footer"> 
+                      <button class="btn btn-primary">Add to Cart</button> 
+                    </div> 
+            </div>
+        </div>
+    </div>
+    </div></div>
+    <div class="content">
+        <div class="container">
+            <div class="heading"> <h3>Bakery</h3></div>
+        </div>
+    </div>
+  
+    <div class="content">
+        <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="circle-img">
+                        <img src="oleato.jpg" alt="strawberry cooler">
+                      </div>
+                    <div class="card-header"> 
+                        <h5><br><br>Strawberry Lemonade</h5>
+                       </div> 
+                       <div class="card-body"> 
+                        <h6>Price</h6>
+                         <p>$2.50</p> 
+                         <h6>Calories</h6> 
+                         <p>130</p> 
+                         <h6>Carbs</h6> 
+                         <p>26g</p> 
+                        </div> 
+                        <div class="card-footer"> 
+                          <button class="btn btn-primary">Add to Cart</button> 
+                        </div> 
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="circle-img">
+                        <img src="oleato2.jpg" alt="strawberry cooler">
+                      </div>
+                    <div class="card-header"> 
+                        <h5><br><br>Strawberry Lemonade</h5>
+                       </div> 
+                       <div class="card-body"> 
+                        <h6>Price</h6>
+                         <p>$2.50</p> 
+                         <h6>Calories</h6> 
+                         <p>130</p> 
+                         <h6>Carbs</h6> 
+                         <p>26g</p> 
+                        </div> 
+                        <div class="card-footer"> 
+                          <button class="btn btn-primary">Add to Cart</button> 
+                        </div> 
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="circle-img">
+                        <img src="matcha.jpg" alt="strawberry cooler">
+                      </div>
+                    <div class="card-header"> 
+                        <h5><br><br>Strawberry Lemonade</h5>
+                       </div> 
+                       <div class="card-body"> 
+                        <h6>Price</h6>
+                         <p>$2.50</p> 
+                         <h6>Calories</h6> 
+                         <p>130</p> 
+                         <h6>Carbs</h6> 
+                         <p>26g</p> 
+                        </div> 
+                        <div class="card-footer"> 
+                          <button class="btn btn-primary">Add to Cart</button> 
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            </div></div>
+</body>
+</html>
+                                                                                                                                                         

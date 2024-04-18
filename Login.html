@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign Up & Log In</title>
+<style>
+/* CSS styles for the form */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 50%;
+  margin: 50px auto;
+}
+
+form {
+  display: none;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form.active {
+  display: block;
+}
+
+form label {
+  font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="date"],
+form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  background-color: #14433D;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #0c2c27;
+}
+
+.feedback-form {
+  display: none;
+}
+
+.feedback-form textarea {
+  width: 100%;
+  height: 150px;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+nav {
+            background-color:#14433D;
+            color: white;
+            height: 50px;
+            display: flex;
+            justify-content: space-between; 
+            align-items:center; 
+            padding: 0 20px; 
+        }
+
+        nav a {
+            text-decoration: none;
+            color:white;
+            margin: 0 10px; 
+        }
+
+        #image-on-right {
+            width: 50px;
+            height: auto; }
+</style>
+</head>
+<body>
+  <nav>
+    <div>
+        <a href="updated.html">Home</a>
+        <a href="jobs.html">Jobs</a>
+        <a href="menu.html">Menu</a>
+        <a href="Login.html">Login</a>
+    </div>
+    <img id="image-on-right" src=https://i.pinimg.com/474x/5a/46/c6/5a46c64aaa900610c19fdc57de3036bb.jpg alt="Image on the right">
+</nav>
+<div class="container">
+  <div>
+    <button id="loginBtn">Log In</button>
+    <button id="signupBtn">Sign Up</button>
+  </div>
+
+  <form id="loginForm" class="active">
+    <h2>Log In</h2>
+    <label for="loginEmail">Email:</label>
+    <input type="email" id="loginEmail" name="loginEmail" required>
+    <label for="loginPassword">Password:</label>
+    <input type="password" id="loginPassword" name="loginPassword" required>
+    <button type="submit">Log In</button>
+  </form>
+
+  <form id="signupForm">
+    <h2>Sign Up</h2>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <label for="Mobile number">Mobile Number</label>
+    <input type="text" id="Mobile number" name="number" required>
+    <label for="birthdate">Birth Date:</label>
+    <input type="date" id="birthdate" name="birthdate" required>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+    <button type="submit">Sign Up</button>
+  </form>
+
+  <div class="profile-container" id="profileContainer">
+    <h2>Welcome, <span id="profileName"></span>!</h2>
+    <p>Email: <span id="profileEmail"></span></p>
+    <p>Birth Date: <span id="profileBirthdate"></span></p>
+    <div class="feedback-form">
+      <h2>Contact Us</h2>
+      <textarea id="feedbackText" placeholder="Enter your feedback here..."></textarea>
+      <button id="submitFeedbackBtn">Submit Feedback</button>
+    </div>
+  </div>
+</div>
+
+<script>
+document.getElementById('loginBtn').addEventListener('click', function() {
+  document.getElementById('signupForm').classList.remove('active');
+  document.getElementById('loginForm').classList.add('active');
+});
+
+document.getElementById('signupBtn').addEventListener('click', function() {
+  document.getElementById('loginForm').classList.remove('active');
+  document.getElementById('signupForm').classList.add('active');
+});
+
+document.getElementById('signupForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const birthdate = document.getElementById('birthdate').value;
+  const password = document.getElementById('password').value;
+
+  const userProfile = {
+    name: name,
+    email: email,
+    birthdate: birthdate,
+    password: password
+  };
+
+  localStorage.setItem('userProfile', JSON.stringify(userProfile));
+
+  document.getElementById('signupForm').classList.remove('active');
+  document.getElementById('loginForm').classList.add('active');
+});
+
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  const loginEmail = document.getElementById('loginEmail').value;
+  const loginPassword = document.getElementById('loginPassword').value;
+
+  const storedProfile = JSON.parse(localStorage.getItem('userProfile'));
+
+  if (storedProfile && storedProfile.email === loginEmail && storedProfile.password === loginPassword) {
+    document.getElementById('signupForm').classList.remove('active');
+    document.getElementById('loginForm').classList.remove('active');
+
+    const profileContainer = document.getElementById('profileContainer');
+    profileContainer.style.display = 'block';
+    document.getElementById('profileName').textContent = storedProfile.name;
+    document.getElementById('profileEmail').textContent = storedProfile.email;
+    document.getElementById('profileBirthdate').textContent = storedProfile.birthdate;
+
+    // Show feedback form
+    document.querySelector('.feedback-form').style.display = 'block';
+  } else {
+    alert('Invalid email or password. Please try again.');
+  }
+});
+
+document.getElementById('submitFeedbackBtn').addEventListener('click', function() {
+  const feedbackText = document.getElementById('feedbackText').value;
+
+  // Here you can handle the submission of feedback
+  // For this example, let's just log the feedback to the console
+  console.log('Feedback submitted:', feedbackText);
+});
+</script>
+
+</body>
+</html>
