@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Belleza&display=swap">
+    <title>Coffee Shop</title>
+    <style>
+          @font-face {
+            font-family: 'Alfa Slab One';
+            src: url('path/to/alfa-slab-one.woff2') format('woff2'), 
+                 url('path/to/alfa-slab-one.woff') format('woff'); 
+            font-weight: bold;
+            font-style: normal;
+          }
+        body {
+            background-color: #14433D;
+            margin: 0; 
+            padding: 0; 
+        }
+
+        nav {
+            background-color: #ffffff;
+            color: #14433D;
+            height: 50px;
+            display: flex;
+            justify-content: space-between; 
+            align-items:center; 
+            padding: 0 20px; 
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #14433D;
+            margin: 0 10px; 
+        }
+
+        #image-on-right {
+            width: 50px;
+            height: auto; }
+        #cf{
+            color:rgb(211, 189, 150);
+            font: small-caps bold 110px/100px Georgia, serif;
+            text-align: center;
+            letter-spacing:0.5cm;
+        }
+        .p{
+            margin-bottom:0%;
+        }
+        .background-text {
+      display: inline; 
+      background-color: lightblue;
+      padding: 2px 5px;
+      font-size: medium;
+    }
+        .text {
+  font-family: 'Belleza', sans-serif;
+  color: rgb(250, 250, 250); 
+  font-size: 60px;
+  text-align: center;
+  padding-bottom: 0%;
+  margin-bottom: 0%;
+  line-height: 1;
+}
+        .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-column {
+    width: 60%;
+}
+        .right-column {
+            width:40%;
+            flex: 1;
+            overflow: hidden;
+            position: relative;
+        }
+        .header-wrapper {
+      overflow: hidden;
+      width:500px;
+      height:600px;
+    }
+
+    .zoominheader {
+      width:500px;
+      height:550px;
+      text-align:center;
+      background: url("https://i.pinimg.com/474x/b6/9c/65/b69c656092e42d47d26674ec9a17fb5e.jpg");
+      background-size: auto;
+      background-attachment: local;
+      background-repeat: repeat;
+      position: relative;
+      animation: zoomin 5s ease-in;
+      transition:ease-in .5s ease-in-out;
+      overflow: hidden;
+    }
+
+    .zoomoutheader {
+      width:500px;
+      height:550px;
+      text-align:center;
+      background:local;
+      animation: zoomout 5s ease-in ;
+      transition: 05px .5s ease-in-out;
+      overflow: hidden;
+    }
+
+   
+    @keyframes zoomin {
+      0% {transform: scale(1);}
+      50% {transform: scale(1.05);}
+      100% {transform: scale(1);}
+    }
+
+    /* Zoom out Keyframes */
+    @keyframes zoomout {
+      0% {transform: scale(1);}
+      50% {transform: scale(0.97);}
+      100% {transform: scale(1);}
+    }
+    .section1{
+        background-color: rgb(250, 243, 234);
+        height: 350px;
+        width:max-content;
+        text-align:justify;
+        text-decoration: wavy;
+    }
+    .slider {
+  display: flex;
+}
+
+.slide {
+  transition: all 0.5s ease;
+  margin-left: 9px;
+}
+        .white-box {
+            background-color: white;
+            padding: 10px;
+            margin: 05px;
+            border-radius: 20%;
+            width: fit-content;
+            height: 190px;
+        }
+        .productimg {
+            height: 120px;
+            width: 100PX;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-right: 30px;
+        }
+        .productinfo{
+            font-family: Arial, Helvetica, sans-serif;
+            color:#14433D;
+            text-align: left;
+            width: 80%;
+            margin-top: 20px;
+        }
+        .productinfo p{
+            margin: 2px 2px;
+        }
+
+        .button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 0px;
+  cursor: pointer;
+  background-color: #14433D;
+  text-justify: auto;
+  background-size:cover;
+}
+.grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); 
+            width: 50%;
+            margin-left: 8%;
+        }
+
+       
+        .grid-item {
+            padding: 0px;
+            text-align:justify;
+            border-radius: 50%;
+            width:150px;
+            height: 150px;
+            margin-bottom: 50px;
+           
+        }
+   
+.shadow-partition {
+    width: 100%;
+    height: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+    margin-top: 0px;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div>
+                <a href="updated.html">Home</a>
+                <a href="jobs.html">Jobs</a>
+                <a href="menu.html">Menu</a>
+                <a href="Login.html">Login</a>
+            </div>
+            <img id="image-on-right" src=https://i.pinimg.com/474x/5a/46/c6/5a46c64aaa900610c19fdc57de3036bb.jpg alt="Image on the right">
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="left-column">
+               <p id="cf" class=""> COFFEE <br> PLEASE </p>
+               <p class="text">YOUR FAVOURITE<br>FRAPPE<br> <a href="#section2" class="background-text">explore more</a></p>
+            </div>
+            <div class="right-column">
+                <div class="header-wrapper">
+                    <div class="zoominheader">
+                        <div class="zoomoutheader">
+                            <br/><br/>
+                            <br/><br/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+         
+        <div class="section1">
+            <div class="shadow-partition"></div>
+            <h1> &nbsp;&nbsp;Barista recommends</h1>
+            
+                <div class="slider">
+                    <div class="slide">
+                        <div class="white-box">
+                            <div class="container">
+                                <img class="productimg" src="caramel.jpeg" alt="caramel">
+                            <div class="productinfo">
+                                <p> Caramel Frappe</p>
+                                <p>price : 399 rs</p>
+                                <button class="button">Add</button>
+
+                            </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                
+                    <div class="slide">
+                        <div class="white-box">
+                            <div class="container">
+                                <img class="productimg" src="https://i.pinimg.com/474x/f8/1c/81/f81c815236b8d5456ed52513bd5c1796.jpg" alt="strawberry milkshake">
+                            <div class="productinfo">
+                                <p> Strawberry Milkshake</p>
+                                <p>price: 290 rs</p>
+                                <button class="button">Add</button>
+
+                            </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+               
+                        <div class="slide">
+                            <div class="white-box">
+                                <div class="container">
+                                    <img class="productimg" src="https://i.pinimg.com/474x/82/13/17/821317d302d206ef9a963ab9e806f54d.jpg" alt="caramel">
+                                <div class="productinfo">
+                                    <p> Javachip Frappucino</p>
+                                    <p>price : 310rs</p>
+                                    <button class="button">Add</button>
+                                </div>
+                                </div>
+                            </div>
+    
+                        </div>
+                        <div class="slide">
+                            <div class="white-box">
+                                <div class="container">
+                                    <img class="productimg" src="https://i.pinimg.com/474x/1f/0e/8e/1f0e8e69cf09490018c822c5bab28875.jpg" alt="caramel">
+                                <div class="productinfo">
+                                    <p> Strawberry Lemonade</p>
+                                    <p>price : 280 rs</p>
+                                    <button class="button">Add</button>
+    
+                                </div>
+    
+                                </div>
+    
+                            </div>
+    
+                        </div>
+                        <div class="slide">
+                            <div class="white-box">
+                                <div class="container">
+                                    <img class="productimg" src="https://i.pinimg.com/474x/03/56/af/0356af2ea29e439aed7fd12f398d1e51.jpg" alt="caramel">
+                                <div class="productinfo">
+                                    <p> Dragonfruit Lemonade</p>
+                                    <p>price : 290 rs</p>
+                                    <button class="button">Add</button>
+    
+                                </div>
+                             </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        <div class="section2">
+            <div class="shadow-partition"></div>
+         <h1 style="color:antiquewhite;">&nbsp;&nbsp;Delights</h1>
+         
+
+    <div class="grid-container">
+       
+        <div class="grid-item">
+            <a href="drinks.html"><img class="grid-item"  data-bs-toggle="tooltip" data-bs-placement="bottom" title="Spring Is On" src="https://i.pinimg.com/564x/1e/a0/66/1ea06638691a7bbaee05d1e232872ba1.jpg" alt="Drink 1"></a>
+           
+        </div>
+        <div class="grid-item">
+            <a href="drinks.html"><img class="grid-item" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Drinks" src="https://i.pinimg.com/474x/58/ee/52/58ee529250709937fe63b056ad23d27f.jpg" alt="Drink 2"></a>
+          
+        </div>
+        <div class="grid-item">
+            <a href="drinks.html"><img class="grid-item" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Bestsellers" src="https://i.pinimg.com/474x/45/38/10/453810958154922d419b4afb3ffda0c5.jpg" alt="Drink 3"></a>
+         
+        </div>
+        <div class="grid-item">
+            <a href="food.html"><img class="grid-item" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Food" src="https://i.pinimg.com/474x/b4/d9/56/b4d9562931db1ffc557ec91815659900.jpg" alt="Food 1"></a>
+          
+        </div>
+        <div class="grid-item">
+            <a href="food.html"><img class="grid-item" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Merchandise" src="https://i.pinimg.com/474x/50/00/23/50002350c037c84760f4da1a9ccd20b1.jpg" alt="Food 2"></a>
+        </div>
+        <div class="grid-item">
+            <a href="food.html"><img class="grid-item"data-bs-toggle="tooltip" data-bs-placement="bottom" title="At Home Coffee" src="https://i.pinimg.com/474x/23/d4/cd/23d4cd7b64fedec111f28e653645ce21.jpg" alt="Food 3"></a>
+        </div>
+    </div>
+    <div class="shadow-partition"></div>
+    <div class="section3">
+        <h1 style="color: antiquewhite;">&nbsp;&nbsp; LEARN MORE ABOUT US </h1>
+        <p style="text-align: center; color:antiquewhite;">Starbucks Corporation is an American multinational chain of coffeehouses and roastery reserves headquartered in Seattle, Washington. <br>&nbsp;It was founded in 1971, and is currently the world's largest coffeehouse chain.
+
+            As of November 2022, the company had 35,711 stores in 80 countries, 15,873 of which were located in <br>the United States. Of Starbucks' U.S.-based stores, over 8,900 are company-operated, while the remainder are licensed.[4]
+            
+         The rise of the second wave of <br>coffee culture is generally attributed to Starbucks, which introduced a wider variety of coffee experiences. Starbucks serves hot and cold drinks, whole-bean coffee,<br> micro-ground instant coffee, 
+            espresso, caffe latte, full and loose-leaf teas, juices, Frappuccino beverages, pastries, and snacks.
+             Some offerings are seasonal or specific <br>to the locality of the store. 
+             Depending on the country, most locations provide free Wi-Fi Internet access.</p>
+             <h2 style="font-weight: bold;font-style: italic;color:antiquewhite;text-align: center;font-size: large;">Our mission: to inspire and nurture the human spirit – one person, one cup and one neighbourhood at a time.</h2>
+      </div>  
+    </main> 
+<script>
+    var sliderImages = document.querySelectorAll('.slide');
+
+var i = 0;
+
+function slider(){
+  for(var j = 0; j < sliderImages.length; j++){
+    sliderImages[j].style.transform="scale(1)";
+  }
+  sliderImages[i].style.transform =  "scale(1.2)";
+
+  if(i < sliderImages.length - 1){
+    i++; 
+  } else { 
+    i = 0;
+  }
+
+}
+
+setInterval(slider, 2000);
+
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+</script>
+</body>
+</html>
